@@ -1,8 +1,5 @@
-function App() {
-  return (
-    <>
-      <button>qqq</button>
-    </>
-  );
+import { Button } from 'antd';
+
+export default function App() {
+  return <Button type="primary">Hello Ant Design</Button>;
 }
-export default App;
