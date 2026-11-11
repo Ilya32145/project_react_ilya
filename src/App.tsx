@@ -1,5 +1,13 @@
-import { Button } from 'antd';
+import { Header } from './components/Header';
+import AppRoutes from './components/AppRoutes';
 
 export default function App() {
-  return <Button type="primary">Hello Ant Design</Button>;
+  return (
+    <>
+      <Header />
+      <main>
+        <AppRoutes />
+      </main>
+    </>
+  );
 }
