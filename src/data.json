@@ -1,0 +1,44 @@
+[
+  {
+    "image": "https://i.pinimg.com/1200x/7b/ee/96/7bee96e69f5eabe124298586fddf98a1.jpg",
+    "title": "Первая карточка",
+    "subtitle": "Короткое описание первой карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-01"
+  },
+  {
+    "image": "https://i.pinimg.com/736x/fd/c6/14/fdc614cb8f2dc69cb47edd5e7e602b65.jpg",
+    "title": "Вторая карточка",
+    "subtitle": "Короткое описание второй карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-05"
+  },
+  {
+    "image": "https://i.pinimg.com/736x/c7/06/63/c706638a5eb991277a5950be6569cd97.jpg",
+    "title": "Третья карточка",
+    "subtitle": "Короткое описание третьей карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-10"
+  },
+  {
+    "image": "https://i.pinimg.com/736x/fd/c6/14/fdc614cb8f2dc69cb47edd5e7e602b65.jpg",
+    "title": "Вторая карточка",
+    "subtitle": "Короткое описание второй карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-05"
+  },
+  {
+    "image": "https://i.pinimg.com/736x/fd/c6/14/fdc614cb8f2dc69cb47edd5e7e602b65.jpg",
+    "title": "Вторая карточка",
+    "subtitle": "Короткое описание второй карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-05"
+  },
+  {
+    "image": "https://i.pinimg.com/736x/fd/c6/14/fdc614cb8f2dc69cb47edd5e7e602b65.jpg",
+    "title": "Вторая карточка",
+    "subtitle": "Короткое описание второй карточки",
+    "icon": "/icon.png",
+    "created_at": "2026-11-05"
+  }
+]

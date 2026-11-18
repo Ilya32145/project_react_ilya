@@ -1,11 +1,11 @@
-import { Header } from './components/Header';
-import AppRoutes from './components/AppRoutes';
+import { Header } from '../components/Header';
+import AppRoutes from './AppRoutes';
 import { useState } from 'react';
-import { SignUpMenu, type User } from './components/SignUpMenu';
+import { SignUpMenu, type User } from '../components/SignUpMenu';
 
 const localUser = {
-  username: 'Илья',
-  password: '123',
+  username: '1',
+  password: '1',
 };
 
 export default function App() {
@@ -22,16 +22,7 @@ export default function App() {
   if (isValid) {
     return (
       <>
-        <h4>Вы на аккаунте: {user?.username}</h4>
-        <button
-          onClick={() => {
-            setUser(null);
-            localStorage.removeItem('user');
-          }}
-        >
-          Выйти
-        </button>
-        <Header />
+        <Header user={user} setUser={setUser} />
         <main>
           <AppRoutes />
         </main>
