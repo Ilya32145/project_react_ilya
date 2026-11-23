@@ -1,14 +1,8 @@
 import { Button as AntButton, ConfigProvider, Flex } from 'antd';
 import { useResponsive } from 'antd-style';
-import type { ButtonProps } from 'antd';
+import type { Button } from '../shared/types/Button';
 
-type Props = {
-  title?: string;
-  func?: () => void;
-  color?: ButtonProps['color'];
-};
-
-export function Button(props: Props) {
+export function Button(props: Button) {
   const { xxl } = useResponsive();
   return (
     <ConfigProvider componentSize={xxl ? 'medium' : 'small'}>

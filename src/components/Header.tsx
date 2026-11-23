@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import type { User } from './SignUpMenu';
 import Input from './Input';
 import Icon from './Icon';
 import {
@@ -10,6 +9,7 @@ import {
 } from '@ant-design/icons';
 import { SideMenu, type SideMenuItem } from './SideMenu';
 import { useState } from 'react';
+import { useAuth } from '../app/AuthContext';
 
 const items: SideMenuItem[] = [
   { key: '1', icon: <PieChartOutlined />, label: 'Option 1' },
@@ -18,8 +18,8 @@ const items: SideMenuItem[] = [
     icon: <MailOutlined />,
     label: 'Почта',
     children: [
-      { key: '1', label: 'Письма от друзей' },
-      { key: '2', label: 'Письма по работе' },
+      { key: 'mail-friends', label: 'Письма от друзей' },
+      { key: 'mail-work', label: 'Письма по работе' },
     ],
   },
   {
@@ -27,18 +27,13 @@ const items: SideMenuItem[] = [
     icon: <AppstoreOutlined />,
     label: 'Тема',
     children: [
-      { key: '3', label: 'Тёмная' },
-      { key: '4', label: 'Светлая' },
+      { key: 'theme-dark', label: 'Тёмная' },
+      { key: 'theme-light', label: 'Светлая' },
     ],
   },
   { type: 'divider' },
   { key: 'logout', icon: <LogoutOutlined />, label: 'Выйти', danger: true },
 ];
-
-type HeaderProps = {
-  user?: User | null;
-  setUser?: (user: User | null) => void;
-};
 
 const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   backgroundColor: isActive ? 'green' : 'blue',
@@ -48,13 +43,13 @@ const linkStyle = ({ isActive }: { isActive: boolean }) => ({
   textDecoration: 'none',
 });
 
-export function Header(props: HeaderProps) {
+export function Header() {
+  const { user, logout } = useAuth();
   const [key, setKey] = useState('1');
 
   const handleSelect = (selected: string) => {
     if (selected === 'logout') {
-      props.setUser?.(null);
-      localStorage.removeItem('user');
+      logout();
       return;
     }
     setKey(selected);
@@ -87,7 +82,7 @@ export function Header(props: HeaderProps) {
             onSelect={handleSelect}
             defaultOpenKeys={['sub1']}
           />
-          <h4>Вы на аккаунте: {props?.user?.username}</h4>
+          <h4>Вы на аккаунте: {user?.username}</h4>
           <Icon
             src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
             size={50}

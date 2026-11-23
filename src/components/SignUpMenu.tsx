@@ -1,10 +1,6 @@
 import type { FormProps } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
-
-export type User = {
-  username?: string;
-  password?: string;
-};
+import type { User } from '../shared/types/User';
 
 export type FieldType = {
   username?: string;

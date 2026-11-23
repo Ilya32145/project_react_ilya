@@ -1,18 +1,11 @@
 import { Card as AntCard } from 'antd';
 import Icon from './Icon';
 import { DiscordOutlined, PinterestOutlined, TelegramFilled } from '@ant-design/icons';
+import type { Card } from '../shared/types/Card';
 
 const { Meta } = AntCard;
 
-type cardProps = {
-  image?: string;
-  title?: string;
-  subtitle?: string;
-  icon?: string;
-  created_at?: string;
-};
-
-export default function Card({ image, title, subtitle }: cardProps) {
+export default function Card({ image, title, subtitle }: Card) {
   return (
     <AntCard
       hoverable
